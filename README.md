@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto Label PR
-        uses: jdfalk/pr-auto-label-action@v1
+        uses: falkcorp/gha-pr-auto-label@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           pr-number: ${{ github.event.pull_request.number }}
@@ -61,7 +61,7 @@ jobs:
 
 ```yaml
 - name: Auto Label PR
-  uses: jdfalk/pr-auto-label-action@v1
+  uses: falkcorp/gha-pr-auto-label@v1
   with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
     pr-number: ${{ github.event.pull_request.number }}
@@ -75,7 +75,7 @@ jobs:
 ```yaml
 - name: Auto Label PR
   id: label
-  uses: jdfalk/pr-auto-label-action@v1
+  uses: falkcorp/gha-pr-auto-label@v1
   with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
     pr-number: ${{ github.event.pull_request.number }}
@@ -170,7 +170,7 @@ Test labeling without applying:
 
 ```yaml
 - name: Test Auto Label
-  uses: jdfalk/pr-auto-label-action@v1
+  uses: falkcorp/gha-pr-auto-label@v1
   with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
     pr-number: ${{ github.event.pull_request.number }}
